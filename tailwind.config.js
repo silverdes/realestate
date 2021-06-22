@@ -15,7 +15,11 @@ module.exports = {
                 sans: ['Rubik'],
             },
             colors:{
-                
+                darkGray :'#383634',
+                darkGreen :'#4c7c7d',
+                darkRed :'#e45959',
+                lightGray :'#edeae7',
+
             }
         },
     },
