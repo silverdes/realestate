@@ -22,7 +22,7 @@ class CreatePropertiesTable extends Migration
             $table->integer('number_of_balconies')->nullable();
             $table->double('balconies_space', 8, 2)->nullable();
             $table->integer('number_of_bedrooms')->nullable();
-            $table->integer('number_of_bathooms')->nullable();
+            $table->integer('number_of_bathrooms')->nullable();
             $table->integer('number_of_garages')->nullable();
             $table->integer('number_of_parking_spaces')->nullable();
             $table->boolean('pets_allowed')->default(0);
