@@ -1,8 +1,11 @@
 <?php
 
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\Property;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\PropertiesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,8 +31,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
 
-Route::get('/home',function ()
-{
-    # code...
-    return Inertia::render('Home');
-});
+Route::get('/properties/create', [PropertiesController::class, 'create'])->name('properties.create');
+
+Route::post('/properties', [PropertiesController::class, 'save'])->name('properties.save');
